@@ -1,0 +1,1908 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Arctic Air Solutions – Dallas's #1 HVAC company. 24/7 emergency AC repair, installation & maintenance. Licensed, insured, same-day service. Call now!">
+<title>Arctic Air Solutions | 24/7 HVAC Repair & Installation in Dallas, TX</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Nunito+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --blue-deep: #0a2240;
+    --blue-mid: #1a4480;
+    --blue-light: #2563eb;
+    --blue-pale: #dbeafe;
+    --orange: #f97316;
+    --orange-dark: #ea6c04;
+    --orange-light: #fff7ed;
+    --white: #ffffff;
+    --gray-50: #f8fafc;
+    --gray-100: #f1f5f9;
+    --gray-200: #e2e8f0;
+    --gray-500: #64748b;
+    --gray-700: #334155;
+    --gray-900: #0f172a;
+    --font-display: 'Barlow Condensed', sans-serif;
+    --font-body: 'Nunito Sans', sans-serif;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+    --shadow-md: 0 4px 16px rgba(0,0,0,0.12);
+    --shadow-lg: 0 8px 32px rgba(0,0,0,0.18);
+    --shadow-xl: 0 20px 60px rgba(0,0,0,0.25);
+    --radius: 12px;
+    --radius-lg: 20px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; font-size: 16px; }
+
+  body {
+    font-family: var(--font-body);
+    color: var(--gray-900);
+    background: var(--white);
+    overflow-x: hidden;
+    line-height: 1.6;
+  }
+
+  img { max-width: 100%; display: block; }
+  a { text-decoration: none; color: inherit; }
+
+  /* ─── UTILITY ─────────────────────────────── */
+  .container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+  .section-label {
+    display: inline-block;
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--orange);
+    background: var(--orange-light);
+    border: 1px solid #fde8cc;
+    padding: 5px 14px;
+    border-radius: 99px;
+    margin-bottom: 14px;
+  }
+  .section-title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    color: var(--blue-deep);
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+  }
+  .section-sub {
+    font-size: 1.05rem;
+    color: var(--gray-500);
+    margin-top: 12px;
+    max-width: 560px;
+  }
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--orange);
+    color: var(--white);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 800;
+    padding: 15px 30px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+    box-shadow: 0 4px 16px rgba(249,115,22,0.35);
+    white-space: nowrap;
+  }
+  .btn-primary:hover { background: var(--orange-dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(249,115,22,0.45); }
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    color: var(--white);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 14px 28px;
+    border-radius: 8px;
+    border: 2px solid rgba(255,255,255,0.5);
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+  }
+  .btn-secondary:hover { background: rgba(255,255,255,0.12); border-color: rgba(255,255,255,0.85); }
+
+  /* ─── TOPBAR ────────────────────────────────── */
+  .topbar {
+    background: var(--blue-deep);
+    color: var(--white);
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 9px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+  }
+  .topbar-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .topbar-left { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+  .topbar-item { display: flex; align-items: center; gap: 6px; opacity: 0.85; }
+  .topbar-item svg { width: 14px; height: 14px; flex-shrink: 0; }
+  .topbar-phone {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--orange);
+    font-weight: 800;
+    font-size: 0.95rem;
+    font-family: var(--font-display);
+    letter-spacing: 0.02em;
+  }
+  .topbar-phone svg { width: 16px; height: 16px; }
+  .urgent-badge {
+    background: var(--orange);
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 800;
+    padding: 2px 8px;
+    border-radius: 99px;
+    animation: pulse-badge 2s infinite;
+  }
+  @keyframes pulse-badge {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+  }
+
+  /* ─── NAVBAR ─────────────────────────────────── */
+  nav {
+    background: var(--white);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  }
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 24px;
+    max-width: 1160px;
+    margin: 0 auto;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .logo-icon {
+    width: 44px;
+    height: 44px;
+    background: var(--blue-deep);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .logo-text {
+    font-family: var(--font-display);
+    font-size: 1.45rem;
+    font-weight: 900;
+    color: var(--blue-deep);
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+  }
+  .logo-text span { color: var(--orange); }
+  .logo-sub {
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: var(--gray-500);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    list-style: none;
+  }
+  .nav-links a {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--gray-700);
+    transition: color 0.2s;
+    letter-spacing: 0.01em;
+  }
+  .nav-links a:hover { color: var(--blue-light); }
+  .nav-cta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .nav-call-btn {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    background: var(--blue-deep);
+    color: var(--white);
+    font-weight: 800;
+    font-size: 0.88rem;
+    padding: 11px 20px;
+    border-radius: 8px;
+    transition: background 0.2s;
+  }
+  .nav-call-btn:hover { background: var(--blue-mid); }
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+  .hamburger span { display: block; width: 24px; height: 2px; background: var(--gray-700); border-radius: 2px; }
+
+  /* ─── HERO ──────────────────────────────────── */
+  .hero {
+    background: linear-gradient(135deg, var(--blue-deep) 0%, #0d3060 45%, #1a4480 100%);
+    position: relative;
+    overflow: hidden;
+    padding: 80px 0 72px;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+  .hero-glow {
+    position: absolute;
+    right: -100px;
+    top: -100px;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(37,99,235,0.3) 0%, transparent 65%);
+    pointer-events: none;
+  }
+  .hero-glow-2 {
+    position: absolute;
+    left: -50px;
+    bottom: -80px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(249,115,22,0.12) 0%, transparent 65%);
+    pointer-events: none;
+  }
+  .hero-inner {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+  }
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(249,115,22,0.15);
+    border: 1px solid rgba(249,115,22,0.35);
+    color: var(--orange);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 6px 16px;
+    border-radius: 99px;
+    margin-bottom: 20px;
+    width: fit-content;
+  }
+  .hero-badge-dot {
+    width: 7px;
+    height: 7px;
+    background: var(--orange);
+    border-radius: 50%;
+    animation: pulse-dot 1.5s infinite;
+  }
+  @keyframes pulse-dot {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.8); }
+  }
+  .hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2.6rem, 5.5vw, 4.2rem);
+    font-weight: 900;
+    color: var(--white);
+    line-height: 1.0;
+    letter-spacing: -0.02em;
+    margin-bottom: 18px;
+  }
+  .hero h1 span { color: var(--orange); }
+  .hero-sub {
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.78);
+    margin-bottom: 32px;
+    line-height: 1.65;
+    max-width: 480px;
+  }
+  .hero-ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-bottom: 36px;
+  }
+  .hero-call-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--orange);
+    color: var(--white);
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    font-weight: 800;
+    padding: 16px 30px;
+    border-radius: 8px;
+    box-shadow: 0 6px 24px rgba(249,115,22,0.45);
+    transition: all 0.2s;
+  }
+  .hero-call-btn:hover { background: var(--orange-dark); transform: translateY(-2px); }
+  .microcopy {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.55);
+    margin-top: 4px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .hero-trust-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .trust-pill {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.14);
+    color: rgba(255,255,255,0.85);
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 7px 14px;
+    border-radius: 99px;
+  }
+  .trust-pill svg { width: 14px; height: 14px; color: var(--orange); flex-shrink: 0; }
+
+  /* Hero Right Card */
+  .hero-right { display: flex; justify-content: center; }
+  .hero-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    padding: 32px;
+    width: 100%;
+    max-width: 380px;
+    box-shadow: var(--shadow-xl);
+  }
+  .hero-card-title {
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: var(--blue-deep);
+    margin-bottom: 6px;
+  }
+  .hero-card-sub { font-size: 0.83rem; color: var(--gray-500); margin-bottom: 20px; }
+  .form-group { margin-bottom: 14px; }
+  .form-group label {
+    display: block;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--gray-700);
+    margin-bottom: 5px;
+    letter-spacing: 0.02em;
+  }
+  .form-group input,
+  .form-group select {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1.5px solid var(--gray-200);
+    border-radius: 8px;
+    font-family: var(--font-body);
+    font-size: 0.92rem;
+    color: var(--gray-900);
+    background: var(--gray-50);
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+    -webkit-appearance: none;
+  }
+  .form-group input:focus,
+  .form-group select:focus {
+    border-color: var(--blue-light);
+    box-shadow: 0 0 0 3px rgba(37,99,235,0.1);
+    background: var(--white);
+  }
+  .form-submit {
+    width: 100%;
+    padding: 15px;
+    background: var(--orange);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 800;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+    box-shadow: 0 4px 16px rgba(249,115,22,0.35);
+    margin-top: 6px;
+  }
+  .form-submit:hover { background: var(--orange-dark); transform: translateY(-1px); }
+  .form-guarantee {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 12px;
+    font-size: 0.74rem;
+    color: var(--gray-500);
+    justify-content: center;
+  }
+  .form-guarantee svg { color: #22c55e; width: 14px; height: 14px; flex-shrink: 0; }
+
+  /* ─── STATS BAR ──────────────────────────────── */
+  .stats-bar {
+    background: var(--blue-mid);
+    padding: 22px 0;
+  }
+  .stats-inner {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    text-align: center;
+  }
+  .stat-item {
+    color: var(--white);
+    padding: 8px 0;
+    border-right: 1px solid rgba(255,255,255,0.15);
+  }
+  .stat-item:last-child { border-right: none; }
+  .stat-num {
+    font-family: var(--font-display);
+    font-size: 2.1rem;
+    font-weight: 900;
+    color: var(--white);
+    line-height: 1;
+    margin-bottom: 3px;
+  }
+  .stat-num span { color: var(--orange); }
+  .stat-label { font-size: 0.78rem; font-weight: 600; color: rgba(255,255,255,0.7); }
+
+  /* ─── TRUST BADGES ────────────────────────────── */
+  .trust-section {
+    background: var(--gray-50);
+    border-bottom: 1px solid var(--gray-200);
+    padding: 28px 0;
+  }
+  .trust-badges {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 28px 48px;
+  }
+  .trust-badge {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .trust-badge-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .trust-badge-icon.blue { background: var(--blue-pale); }
+  .trust-badge-icon.orange { background: var(--orange-light); }
+  .trust-badge-icon svg { width: 24px; height: 24px; }
+  .trust-badge-text strong {
+    display: block;
+    font-size: 0.92rem;
+    font-weight: 800;
+    color: var(--gray-900);
+  }
+  .trust-badge-text span { font-size: 0.75rem; color: var(--gray-500); font-weight: 600; }
+  .stars { display: flex; gap: 2px; margin-bottom: 2px; }
+  .star { color: #fbbf24; font-size: 0.9rem; }
+
+  /* ─── SERVICES ─────────────────────────────────── */
+  .services { padding: 88px 0; background: var(--white); }
+  .section-header { text-align: center; margin-bottom: 52px; }
+  .section-header .section-sub { margin: 12px auto 0; }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .service-card {
+    background: var(--white);
+    border: 1.5px solid var(--gray-200);
+    border-radius: var(--radius-lg);
+    padding: 32px 28px;
+    transition: all 0.25s;
+    position: relative;
+    overflow: hidden;
+  }
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: var(--blue-light);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s;
+  }
+  .service-card:hover { box-shadow: var(--shadow-lg); border-color: var(--blue-light); transform: translateY(-4px); }
+  .service-card:hover::before { transform: scaleX(1); }
+  .service-card.featured {
+    background: var(--blue-deep);
+    border-color: var(--blue-deep);
+    color: var(--white);
+  }
+  .service-card.featured::before { background: var(--orange); transform: scaleX(1); }
+  .service-icon {
+    width: 54px;
+    height: 54px;
+    border-radius: 12px;
+    background: var(--blue-pale);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transition: background 0.25s;
+  }
+  .service-card:hover .service-icon { background: var(--blue-deep); }
+  .service-card:hover .service-icon svg { color: var(--white) !important; }
+  .service-card.featured .service-icon { background: rgba(255,255,255,0.12); }
+  .service-card.featured .service-icon svg { color: var(--orange) !important; }
+  .service-icon svg { width: 26px; height: 26px; color: var(--blue-light); }
+  .service-card h3 {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--blue-deep);
+    margin-bottom: 10px;
+  }
+  .service-card.featured h3 { color: var(--white); }
+  .service-card p { font-size: 0.88rem; color: var(--gray-500); line-height: 1.65; margin-bottom: 16px; }
+  .service-card.featured p { color: rgba(255,255,255,0.7); }
+  .service-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.83rem;
+    font-weight: 800;
+    color: var(--blue-light);
+    transition: gap 0.2s;
+  }
+  .service-link:hover { gap: 10px; }
+  .service-card.featured .service-link { color: var(--orange); }
+  .service-badge {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: var(--orange);
+    color: var(--white);
+    font-size: 0.65rem;
+    font-weight: 800;
+    padding: 4px 10px;
+    border-radius: 99px;
+    letter-spacing: 0.05em;
+  }
+
+  /* ─── WHY CHOOSE US ─────────────────────────── */
+  .why-section {
+    background: var(--gray-50);
+    padding: 88px 0;
+    border-top: 1px solid var(--gray-200);
+    border-bottom: 1px solid var(--gray-200);
+  }
+  .why-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 72px;
+    align-items: center;
+  }
+  .why-left { display: flex; flex-direction: column; gap: 0; }
+  .why-item {
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+    padding: 22px 0;
+    border-bottom: 1px solid var(--gray-200);
+  }
+  .why-item:last-child { border-bottom: none; }
+  .why-num {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--gray-200);
+    line-height: 1;
+    min-width: 44px;
+    padding-top: 2px;
+  }
+  .why-content h3 {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--blue-deep);
+    margin-bottom: 5px;
+  }
+  .why-content p { font-size: 0.88rem; color: var(--gray-500); line-height: 1.6; }
+  .why-right { display: flex; flex-direction: column; gap: 20px; }
+  .why-cta-box {
+    background: var(--blue-deep);
+    border-radius: var(--radius-lg);
+    padding: 36px;
+    color: var(--white);
+  }
+  .why-cta-box h3 {
+    font-family: var(--font-display);
+    font-size: 1.7rem;
+    font-weight: 900;
+    margin-bottom: 10px;
+    line-height: 1.1;
+  }
+  .why-cta-box p { font-size: 0.88rem; color: rgba(255,255,255,0.72); margin-bottom: 22px; line-height: 1.6; }
+  .why-guarantee {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: var(--radius);
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+  }
+  .why-guarantee-icon {
+    width: 40px;
+    height: 40px;
+    background: rgba(249,115,22,0.15);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .why-guarantee-icon svg { width: 20px; height: 20px; color: var(--orange); }
+  .why-guarantee h4 { font-size: 0.9rem; font-weight: 800; color: var(--white); margin-bottom: 3px; }
+  .why-guarantee p { font-size: 0.78rem; color: rgba(255,255,255,0.6); }
+
+  /* ─── PROCESS STRIP ─────────────────────────── */
+  .process-section {
+    background: var(--blue-deep);
+    padding: 52px 0;
+  }
+  .process-inner {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    text-align: center;
+  }
+  .process-step {
+    padding: 10px;
+    position: relative;
+  }
+  .process-step::after {
+    content: '→';
+    position: absolute;
+    right: -12px;
+    top: 22px;
+    color: rgba(255,255,255,0.25);
+    font-size: 1.2rem;
+    font-weight: 300;
+  }
+  .process-step:last-child::after { display: none; }
+  .process-num {
+    font-family: var(--font-display);
+    font-size: 2.4rem;
+    font-weight: 900;
+    color: rgba(255,255,255,0.12);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .process-icon {
+    width: 52px;
+    height: 52px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 14px;
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+  .process-icon svg { width: 24px; height: 24px; color: var(--orange); }
+  .process-step h4 {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--white);
+    margin-bottom: 6px;
+  }
+  .process-step p { font-size: 0.78rem; color: rgba(255,255,255,0.55); line-height: 1.55; }
+
+  /* ─── TESTIMONIALS ──────────────────────────── */
+  .testimonials { padding: 88px 0; background: var(--white); }
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .testi-card {
+    background: var(--gray-50);
+    border: 1.5px solid var(--gray-200);
+    border-radius: var(--radius-lg);
+    padding: 28px;
+    transition: box-shadow 0.25s;
+  }
+  .testi-card:hover { box-shadow: var(--shadow-md); }
+  .testi-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 14px;
+  }
+  .testi-avatar {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: var(--white);
+    flex-shrink: 0;
+  }
+  .testi-avatar.a1 { background: var(--blue-mid); }
+  .testi-avatar.a2 { background: #7c3aed; }
+  .testi-avatar.a3 { background: #059669; }
+  .testi-avatar.a4 { background: #dc2626; }
+  .testi-avatar.a5 { background: #d97706; }
+  .google-g {
+    width: 24px;
+    height: 24px;
+    opacity: 0.4;
+  }
+  .testi-stars { display: flex; gap: 2px; margin-bottom: 5px; }
+  .testi-stars span { color: #fbbf24; font-size: 0.85rem; }
+  .testi-name { font-size: 0.82rem; font-weight: 800; color: var(--gray-900); }
+  .testi-location { font-size: 0.72rem; color: var(--gray-500); }
+  .testi-text {
+    font-size: 0.9rem;
+    color: var(--gray-700);
+    line-height: 1.65;
+    font-style: italic;
+  }
+  .testi-service {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 14px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--blue-light);
+    background: var(--blue-pale);
+    padding: 4px 10px;
+    border-radius: 99px;
+  }
+
+  /* ─── LEAD FORM SECTION ──────────────────────── */
+  .cta-form-section {
+    background: linear-gradient(135deg, #0a2240, #1a4480);
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .cta-form-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+  .cta-form-inner {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 72px;
+    align-items: center;
+  }
+  .cta-form-left h2 {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 900;
+    color: var(--white);
+    line-height: 1.05;
+    margin-bottom: 14px;
+  }
+  .cta-form-left h2 span { color: var(--orange); }
+  .cta-form-left p { font-size: 1rem; color: rgba(255,255,255,0.72); line-height: 1.65; margin-bottom: 28px; }
+  .cta-perks { display: flex; flex-direction: column; gap: 12px; }
+  .cta-perk {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.85);
+    font-weight: 600;
+  }
+  .cta-perk-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: rgba(249,115,22,0.18);
+    border: 1px solid rgba(249,115,22,0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .cta-perk-icon svg { width: 14px; height: 14px; color: var(--orange); }
+  .cta-form-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    padding: 36px;
+    box-shadow: var(--shadow-xl);
+  }
+  .cta-form-card h3 {
+    font-family: var(--font-display);
+    font-size: 1.45rem;
+    font-weight: 800;
+    color: var(--blue-deep);
+    margin-bottom: 4px;
+  }
+  .cta-form-card p { font-size: 0.82rem; color: var(--gray-500); margin-bottom: 22px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+  /* ─── SERVICE AREAS ─────────────────────────── */
+  .areas-section { padding: 72px 0; background: var(--gray-50); }
+  .areas-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    margin-top: 36px;
+  }
+  .area-chip {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--white);
+    border: 1.5px solid var(--gray-200);
+    border-radius: 10px;
+    padding: 12px 16px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--gray-700);
+    transition: all 0.2s;
+  }
+  .area-chip:hover { border-color: var(--blue-light); color: var(--blue-light); box-shadow: var(--shadow-sm); }
+  .area-chip svg { width: 16px; height: 16px; color: var(--orange); flex-shrink: 0; }
+
+  /* ─── EMERGENCY BANNER ──────────────────────── */
+  .emergency-banner {
+    background: linear-gradient(90deg, var(--orange-dark), var(--orange));
+    padding: 20px 0;
+  }
+  .emergency-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .emergency-text {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    color: var(--white);
+  }
+  .emergency-text svg { width: 28px; height: 28px; flex-shrink: 0; }
+  .emergency-text strong {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-weight: 900;
+    line-height: 1.1;
+  }
+  .emergency-text span { font-size: 0.83rem; opacity: 0.88; }
+  .emergency-call-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    background: var(--white);
+    color: var(--orange-dark);
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    font-weight: 900;
+    padding: 13px 26px;
+    border-radius: 8px;
+    transition: transform 0.2s;
+    white-space: nowrap;
+  }
+  .emergency-call-btn:hover { transform: scale(1.03); }
+  .emergency-call-btn svg { width: 18px; height: 18px; }
+
+  /* ─── FOOTER ─────────────────────────────────── */
+  footer {
+    background: var(--gray-900);
+    color: rgba(255,255,255,0.7);
+    padding: 60px 0 0;
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 40px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .footer-logo-area .logo-text { color: var(--white); }
+  .footer-desc {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.7;
+    margin: 14px 0 20px;
+  }
+  .footer-contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.83rem;
+    margin-bottom: 10px;
+    color: rgba(255,255,255,0.65);
+  }
+  .footer-contact-item svg { width: 15px; height: 15px; color: var(--orange); margin-top: 2px; flex-shrink: 0; }
+  .footer-contact-item a:hover { color: var(--orange); }
+  .footer-col h4 {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--white);
+    margin-bottom: 18px;
+    letter-spacing: 0.02em;
+  }
+  .footer-links { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+  .footer-links li a {
+    font-size: 0.83rem;
+    color: rgba(255,255,255,0.55);
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .footer-links li a:hover { color: var(--orange); }
+  .footer-links li a::before { content: '›'; font-size: 1rem; color: var(--orange); }
+  .hours-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    color: rgba(255,255,255,0.55);
+  }
+  .hours-item:last-child { border-bottom: none; }
+  .hours-item .open { color: #22c55e; font-weight: 700; }
+  .hours-phone {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    background: var(--orange);
+    color: var(--white);
+    font-weight: 800;
+    font-size: 1rem;
+    font-family: var(--font-display);
+    padding: 13px 20px;
+    border-radius: 8px;
+    margin-top: 18px;
+    transition: background 0.2s;
+  }
+  .hours-phone:hover { background: var(--orange-dark); }
+  .hours-phone svg { width: 18px; height: 18px; }
+  .footer-bottom {
+    padding: 18px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .footer-bottom p { font-size: 0.75rem; color: rgba(255,255,255,0.3); }
+  .footer-bottom-links { display: flex; gap: 18px; }
+  .footer-bottom-links a { font-size: 0.75rem; color: rgba(255,255,255,0.3); transition: color 0.2s; }
+  .footer-bottom-links a:hover { color: rgba(255,255,255,0.6); }
+
+  /* ─── MOBILE NAV ──────────────────────────────── */
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 200;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+  }
+  .mobile-menu.open { display: flex; opacity: 1; pointer-events: all; }
+  .mobile-menu-panel {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: min(320px, 90vw);
+    background: var(--white);
+    padding: 28px 24px;
+    overflow-y: auto;
+    transform: translateX(100%);
+    transition: transform 0.3s;
+  }
+  .mobile-menu.open .mobile-menu-panel { transform: translateX(0); }
+  .mobile-menu-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--gray-700);
+    font-size: 1.5rem;
+    line-height: 1;
+  }
+  .mobile-nav-links { list-style: none; margin-top: 40px; }
+  .mobile-nav-links li { border-bottom: 1px solid var(--gray-200); }
+  .mobile-nav-links li a {
+    display: block;
+    padding: 14px 0;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--gray-700);
+  }
+  .mobile-call-section { margin-top: 24px; display: flex; flex-direction: column; gap: 12px; }
+
+  /* ─── SCROLL ANIM ──────────────────────────────── */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.55s ease, transform 0.55s ease;
+  }
+  .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+  /* ─── RESPONSIVE ──────────────────────────────── */
+  @media (max-width: 1024px) {
+    .hero-inner { gap: 40px; }
+    .services-grid { grid-template-columns: repeat(2, 1fr); }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  @media (max-width: 768px) {
+    .nav-links, .nav-cta { display: none; }
+    .hamburger { display: flex; }
+    .topbar-left .topbar-item:not(:first-child) { display: none; }
+    .hero { padding: 56px 0; min-height: auto; }
+    .hero-inner { grid-template-columns: 1fr; gap: 36px; }
+    .hero-right { display: none; }
+    .hero h1 { font-size: 2.4rem; }
+    .stats-inner { grid-template-columns: repeat(2, 1fr); }
+    .stat-item:nth-child(2) { border-right: none; }
+    .trust-badges { gap: 18px 28px; }
+    .services-grid { grid-template-columns: 1fr; }
+    .why-inner { grid-template-columns: 1fr; gap: 40px; }
+    .process-inner { grid-template-columns: repeat(2, 1fr); }
+    .process-step::after { display: none; }
+    .testimonials-grid { grid-template-columns: 1fr; }
+    .cta-form-inner { grid-template-columns: 1fr; gap: 36px; }
+    .form-row { grid-template-columns: 1fr; }
+    .areas-grid { grid-template-columns: repeat(2, 1fr); }
+    .emergency-inner { flex-direction: column; text-align: center; }
+    .footer-grid { grid-template-columns: 1fr; }
+    .footer-bottom { flex-direction: column; text-align: center; }
+  }
+
+  @media (max-width: 480px) {
+    .process-inner { grid-template-columns: 1fr 1fr; }
+    .areas-grid { grid-template-columns: 1fr 1fr; }
+    .hero-ctas { flex-direction: column; }
+    .hero-ctas a, .hero-ctas button { width: 100%; justify-content: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══ TOP BAR ═══════════════════════════════════════════ -->
+<div class="topbar">
+  <div class="container">
+    <div class="topbar-inner">
+      <div class="topbar-left">
+        <div class="topbar-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          Dallas, Texas — Serving DFW Metro Area
+        </div>
+        <div class="topbar-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Mon–Sun: Open 24 Hours
+        </div>
+        <span class="urgent-badge">⚡ EMERGENCY SERVICE AVAILABLE</span>
+      </div>
+      <a href="tel:+12145550192" class="topbar-phone">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.36 12a19.79 19.79 0 01-3.07-8.67A2 2 0 013.27 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        (214) 555-0192
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ NAVBAR ════════════════════════════════════════════ -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="logo">
+      <div class="logo-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" width="24" height="24"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2"/></svg>
+      </div>
+      <div>
+        <div class="logo-text">Arctic Air <span>Solutions</span></div>
+        <div class="logo-sub">HVAC Experts · Dallas, TX</div>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#why-us">Why Us</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#areas">Service Areas</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="tel:+12145550192" class="nav-call-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" width="16" height="16"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.36 12a19.79 19.79 0 01-3.07-8.67A2 2 0 013.27 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        (214) 555-0192
+      </a>
+      <a href="#contact" class="btn-primary" style="padding:11px 22px; font-size:0.88rem;">Book Service</a>
+    </div>
+    <div class="hamburger" id="hamburgerBtn" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Menu Overlay -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-panel">
+    <button class="mobile-menu-close" onclick="toggleMenu()">✕</button>
+    <div class="logo">
+      <div class="logo-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" width="22" height="22"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></div>
+      <div><div class="logo-text">Arctic Air <span>Solutions</span></div></div>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="#services" onclick="toggleMenu()">Services</a></li>
+      <li><a href="#why-us" onclick="toggleMenu()">Why Us</a></li>
+      <li><a href="#reviews" onclick="toggleMenu()">Reviews</a></li>
+      <li><a href="#areas" onclick="toggleMenu()">Service Areas</a></li>
+      <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+    </ul>
+    <div class="mobile-call-section">
+      <a href="tel:+12145550192" class="btn-primary" style="width:100%;justify-content:center;">📞 Call Now: (214) 555-0192</a>
+      <a href="#contact" onclick="toggleMenu()" class="btn-primary" style="background:var(--blue-deep);width:100%;justify-content:center;box-shadow:none;">Book Service Online</a>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ HERO ══════════════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-glow-2"></div>
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-left">
+        <div class="hero-badge">
+          <div class="hero-badge-dot"></div>
+          Available 24/7 · Dallas's Most Trusted HVAC
+        </div>
+        <h1>Dallas's #1<br><span>HVAC Repair</span><br>Done Right, Fast.</h1>
+        <p class="hero-sub">Your AC breaks at midnight. Your furnace quits in January. We answer the phone, show up fast, and fix it right — <strong style="color:rgba(255,255,255,0.95)">the same day you call.</strong> No surprise fees. No runaround.</p>
+        <div class="hero-ctas">
+          <a href="tel:+12145550192" class="hero-call-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" width="20" height="20"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.36 12a19.79 19.79 0 01-3.07-8.67A2 2 0 013.27 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            Call Now: (214) 555-0192
+          </a>
+          <a href="#contact" class="btn-secondary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            Book Service Online
+          </a>
+        </div>
+        <p class="microcopy">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><polyline points="20 6 9 17 4 12"/></svg>
+          We respond within 15 minutes · No after-hours fees
+        </p>
+        <div class="hero-trust-pills" style="margin-top:22px">
+          <div class="trust-pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Licensed & Insured
+          </div>
+          <div class="trust-pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Same-Day Service
+          </div>
+          <div class="trust-pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            Upfront Pricing
+          </div>
+          <div class="trust-pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            4.9★ Google Rating
+          </div>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="hero-card">
+          <div class="hero-card-title">Get Fast Service Today</div>
+          <div class="hero-card-sub">Fill out below — we'll call you back in under 15 minutes.</div>
+          <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" placeholder="John Smith">
+          </div>
+          <div class="form-group">
+            <label>Phone Number</label>
+            <input type="tel" placeholder="(214) 000-0000">
+          </div>
+          <div class="form-group">
+            <label>Service Needed</label>
+            <select>
+              <option value="">— Select a Service —</option>
+              <option>AC Repair — Emergency</option>
+              <option>AC Repair — Non-Urgent</option>
+              <option>AC Installation / Replacement</option>
+              <option>Heating Repair</option>
+              <option>Furnace Installation</option>
+              <option>Maintenance Plan</option>
+              <option>Other / Not Sure</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Best Time to Call</label>
+            <select>
+              <option>ASAP — It's Urgent</option>
+              <option>Morning (8am–12pm)</option>
+              <option>Afternoon (12pm–5pm)</option>
+              <option>Evening (5pm–9pm)</option>
+            </select>
+          </div>
+          <button class="form-submit" onclick="handleHeroForm(this)">⚡ Get Fast Service Now</button>
+          <div class="form-guarantee">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            No obligation · 100% free quote · We never share your info
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ STATS BAR ═════════════════════════════════════════ -->
+<div class="stats-bar">
+  <div class="container">
+    <div class="stats-inner">
+      <div class="stat-item fade-in">
+        <div class="stat-num">4.9<span>★</span></div>
+        <div class="stat-label">Google Rating (800+ Reviews)</div>
+      </div>
+      <div class="stat-item fade-in">
+        <div class="stat-num">15<span>+</span></div>
+        <div class="stat-label">Years Serving Dallas</div>
+      </div>
+      <div class="stat-item fade-in">
+        <div class="stat-num">12<span>K+</span></div>
+        <div class="stat-label">Happy Customers</div>
+      </div>
+      <div class="stat-item fade-in">
+        <div class="stat-num">24<span>/7</span></div>
+        <div class="stat-label">Emergency Service, Always</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ TRUST BADGES ══════════════════════════════════════ -->
+<div class="trust-section">
+  <div class="container">
+    <div class="trust-badges">
+      <div class="trust-badge">
+        <div class="trust-badge-icon blue">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#1a4480" stroke-width="2" width="24" height="24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="trust-badge-text">
+          <strong>Licensed & Insured</strong>
+          <span>TACL Licensed · $2M Liability Coverage</span>
+        </div>
+      </div>
+      <div class="trust-badge">
+        <div class="trust-badge-icon orange">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#ea6c04" stroke-width="2" width="24" height="24"><circle cx="12" cy="8" r="4"/><path d="M16 16v-1a4 4 0 00-8 0v1"/><path d="M6 20l1.5-1.5M18 20l-1.5-1.5M12 20v-4"/></svg>
+        </div>
+        <div class="trust-badge-text">
+          <strong>NATE Certified Technicians</strong>
+          <span>Factory-trained on all major brands</span>
+        </div>
+      </div>
+      <div class="trust-badge">
+        <div class="trust-badge-icon blue">
+          <div>
+            <div class="stars">
+              <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+            </div>
+            <span style="font-size:0.7rem;font-weight:800;color:#1a4480;">4.9 / 5 Google</span>
+          </div>
+        </div>
+        <div class="trust-badge-text">
+          <strong>Top-Rated in Dallas</strong>
+          <span>800+ verified 5-star reviews</span>
+        </div>
+      </div>
+      <div class="trust-badge">
+        <div class="trust-badge-icon orange">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#ea6c04" stroke-width="2" width="24" height="24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        </div>
+        <div class="trust-badge-text">
+          <strong>2-Year Parts & Labor Warranty</strong>
+          <span>We stand behind every repair</span>
+        </div>
+      </div>
+      <div class="trust-badge">
+        <div class="trust-badge-icon blue">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#1a4480" stroke-width="2" width="24" height="24"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+        </div>
+        <div class="trust-badge-text">
+          <strong>Flexible Financing Available</strong>
+          <span>0% interest options · Apply in minutes</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ SERVICES ══════════════════════════════════════════ -->
+<section id="services" class="services">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-label">What We Do</span>
+      <h2 class="section-title">Complete HVAC Services<br>For Dallas Homeowners</h2>
+      <p class="section-sub">From emergency repairs to full system replacements — we handle every heating and cooling need with speed, skill, and honesty.</p>
+    </div>
+    <div class="services-grid">
+      <!-- AC Repair -->
+      <div class="service-card featured fade-in">
+        <span class="service-badge">Most Popular</span>
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="26" height="26"><path d="M12 2v20M2 12h20M5.64 5.64l12.72 12.72M18.36 5.64L5.64 18.36"/><circle cx="12" cy="12" r="3"/></svg>
+        </div>
+        <h3>AC Repair</h3>
+        <p>AC down in 100°F Dallas heat? We dispatch a certified tech within the hour. We carry 300+ common parts on our trucks so most repairs are done same-visit — no return trips, no excuses.</p>
+        <a href="#contact" class="service-link">Get Fast Repair →</a>
+      </div>
+      <!-- AC Install -->
+      <div class="service-card fade-in">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="26" height="26"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <h3>AC Installation</h3>
+        <p>Upgrading to a high-efficiency system can cut your energy bill by up to 40%. We help you choose the right unit for your home's size, budget, and Texas climate — then install it perfectly.</p>
+        <a href="#contact" class="service-link">Get a Free Quote →</a>
+      </div>
+      <!-- Heating Repair -->
+      <div class="service-card fade-in">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="26" height="26"><path d="M12 2a7 7 0 017 7c0 3.5-2.5 6-3.5 9H8.5C7.5 15 5 12.5 5 9a7 7 0 017-7z"/><path d="M9 17h6M9 20h6"/></svg>
+        </div>
+        <h3>Heating Repair</h3>
+        <p>When North Texas winters bite and your heat goes out, we come running — day or night. Our technicians diagnose fast and repair right, restoring your family's comfort the same day.</p>
+        <a href="#contact" class="service-link">Schedule Repair →</a>
+      </div>
+      <!-- Furnace Install -->
+      <div class="service-card fade-in">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="26" height="26"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <h3>Furnace Installation</h3>
+        <p>Old furnace costing you money every month? A new high-efficiency unit pays for itself. We handle the full installation — removal of old equipment, new install, permits, and testing.</p>
+        <a href="#contact" class="service-link">Explore Options →</a>
+      </div>
+      <!-- Maintenance -->
+      <div class="service-card fade-in">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="26" height="26"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+        </div>
+        <h3>Maintenance Plans</h3>
+        <p>Our annual tune-up plans keep your system running at peak efficiency, prevent 85% of breakdowns before they happen, and give you priority scheduling + discounts on all repairs.</p>
+        <a href="#contact" class="service-link">View Plans & Pricing →</a>
+      </div>
+      <!-- Mini Split -->
+      <div class="service-card fade-in">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="26" height="26"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <h3>Mini-Split & Ductless</h3>
+        <p>Perfect for additions, garages, or zone cooling. We design, supply, and install ductless mini-split systems from leading brands — with zero disruption to your existing HVAC setup.</p>
+        <a href="#contact" class="service-link">Learn More →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PROCESS STRIP ═════════════════════════════════════ -->
+<div class="process-section">
+  <div class="container">
+    <div class="process-inner">
+      <div class="process-step fade-in">
+        <div class="process-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.36 12a19.79 19.79 0 01-3.07-8.67A2 2 0 013.27 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        </div>
+        <h4>1. Call or Book</h4>
+        <p>Call us anytime or fill out our form. We pick up — always. No hold music, no voicemail jail.</p>
+      </div>
+      <div class="process-step fade-in">
+        <div class="process-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h4>2. We Arrive Fast</h4>
+        <p>Your certified tech arrives on time with the parts and tools to fix most issues in one trip.</p>
+      </div>
+      <div class="process-step fade-in">
+        <div class="process-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/></svg>
+        </div>
+        <h4>3. Get an Honest Quote</h4>
+        <p>Before we touch anything, you get the full price upfront. No surprises, no hidden fees. Period.</p>
+      </div>
+      <div class="process-step fade-in">
+        <div class="process-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <h4>4. Problem Solved</h4>
+        <p>We fix it right the first time — backed by our 2-year parts and labor warranty. You stay cool.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ WHY US ════════════════════════════════════════════ -->
+<section id="why-us" class="why-section">
+  <div class="container">
+    <div class="why-inner">
+      <div class="why-left fade-in">
+        <span class="section-label">Why Dallas Trusts Us</span>
+        <h2 class="section-title" style="margin-bottom:8px">Not Just Another<br>HVAC Company</h2>
+        <p style="color:var(--gray-500);font-size:0.92rem;margin-bottom:28px;line-height:1.65">We know you have options. Here's why 12,000+ Dallas homeowners choose Arctic Air Solutions — and keep coming back.</p>
+        <div class="why-item">
+          <div class="why-num">01</div>
+          <div class="why-content">
+            <h3>⚡ Same-Day Service Guarantee</h3>
+            <p>When you call before 2pm, we guarantee a tech at your door the same day — or your diagnostic fee is free. We don't make you wait days for your comfort.</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="why-num">02</div>
+          <div class="why-content">
+            <h3>🔒 Flat-Rate, Upfront Pricing</h3>
+            <p>We quote before we work. No "surprises" on your invoice, no mysterious add-ons. The price we say is the price you pay — guaranteed in writing every time.</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="why-num">03</div>
+          <div class="why-content">
+            <h3>🏆 NATE-Certified Technicians Only</h3>
+            <p>Every tech on our team is NATE-certified and background-checked. We don't hire rookies and send them to your home. You get a pro every single visit.</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="why-num">04</div>
+          <div class="why-content">
+            <h3>🛡️ 2-Year Parts & Labor Warranty</h3>
+            <p>If we fixed it and it breaks again within 2 years — we come back and fix it for free. That's our confidence in the quality of our work.</p>
+          </div>
+        </div>
+      </div>
+      <div class="why-right fade-in">
+        <div class="why-cta-box">
+          <h3>Still Running Hot?<br>Let's Change That — <span style="color:var(--orange)">Today.</span></h3>
+          <p>Whether you need an emergency fix right now or want to schedule something for next week, we make it easy. One call handles everything.</p>
+          <a href="tel:+12145550192" class="btn-primary" style="width:100%;justify-content:center;font-size:1.05rem;margin-bottom:12px;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" width="20" height="20"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.36 12a19.79 19.79 0 01-3.07-8.67A2 2 0 013.27 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            Call (214) 555-0192 Now
+          </a>
+          <a href="#contact" class="btn-secondary" style="width:100%;justify-content:center;">Schedule Online Instead</a>
+        </div>
+        <div class="why-guarantee">
+          <div class="why-guarantee-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div>
+            <h4 style="color: #454545;">Our 100% Satisfaction Promise</h4>
+            <p style="color: #454545;">If you're not completely happy with our service, we'll make it right — no questions asked. That's the Arctic Air guarantee.</p>
+          </div>
+        </div>
+        <div class="why-guarantee">
+          <div class="why-guarantee-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+          </div>
+          <div style="color: black;">
+            <h4 style="color: #454545;">Financing Available for New Systems</h4>
+            <p style="color: #454545;">Don't let the cost of a new system hold you back. We offer 0% interest plans with payments starting under $60/month.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TESTIMONIALS ══════════════════════════════════════ -->
+<section id="reviews" class="testimonials">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-label">Real Customer Reviews</span>
+      <h2 class="section-title">Don't Take Our Word For It</h2>
+      <p class="section-sub">Over 800 verified 5-star reviews on Google. Here's what your neighbors are saying about us.</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testi-card fade-in">
+        <div class="testi-top">
+          <div class="testi-avatar a1">MR</div>
+          <svg class="google-g" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        </div>
+        <div class="testi-stars">
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+        <div class="testi-name">Michael R.</div>
+        <div class="testi-location">Plano, TX</div>
+        <p class="testi-text">"My AC went out at 10pm on the hottest day of the year. Arctic Air had a technician at my door in under an hour. He diagnosed the problem in minutes, had the part on his truck, and had cool air running again by midnight. I couldn't believe it. These guys are the real deal."</p>
+        <span class="testi-service">✦ AC Repair — Emergency</span>
+      </div>
+
+      <div class="testi-card fade-in">
+        <div class="testi-top">
+          <div class="testi-avatar a2">SC</div>
+          <svg class="google-g" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        </div>
+        <div class="testi-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <div class="testi-name">Sarah C.</div>
+        <div class="testi-location">Frisco, TX</div>
+        <p class="testi-text">"I got 3 quotes for a new AC system and Arctic Air was not only the most competitive — they were the most honest. Jake explained everything clearly, didn't try to upsell me, and the installation was spotless. Two weeks later my electric bill dropped $80. I'm referring everyone I know."</p>
+        <span class="testi-service">✦ AC Installation</span>
+      </div>
+
+      <div class="testi-card fade-in">
+        <div class="testi-top">
+          <div class="testi-avatar a3">DW</div>
+          <svg class="google-g" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        </div>
+        <div class="testi-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <div class="testi-name">David W.</div>
+        <div class="testi-location">North Dallas, TX</div>
+        <p class="testi-text">"Our furnace died on a freezing January night with two kids in the house. Arctic Air showed up within 45 minutes — on a Sunday. The tech was professional, efficient, and had us warm again in 2 hours. This is the only HVAC company I'll ever call again. Absolute lifesavers."</p>
+        <span class="testi-service">✦ Heating Repair — Emergency</span>
+      </div>
+
+      <div class="testi-card fade-in">
+        <div class="testi-top">
+          <div class="testi-avatar a4">LM</div>
+          <svg class="google-g" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        </div>
+        <div class="testi-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <div class="testi-name">Linda M.</div>
+        <div class="testi-location">Richardson, TX</div>
+        <p class="testi-text">"I've been on their annual maintenance plan for 3 years. In that time, I haven't had a single breakdown. Before Arctic Air, I was calling someone every summer for emergency repairs. The plan pays for itself twice over. Highly recommend to any homeowner."</p>
+        <span class="testi-service">✦ Annual Maintenance Plan</span>
+      </div>
+
+      <div class="testi-card fade-in">
+        <div class="testi-top">
+          <div class="testi-avatar a5">JT</div>
+          <svg class="google-g" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        </div>
+        <div class="testi-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <div class="testi-name">James T.</div>
+        <div class="testi-location">McKinney, TX</div>
+        <p class="testi-text">"Honest, punctual, and genuinely great at what they do. The technician caught a refrigerant leak that two other companies missed. Fixed properly the first time, price was fair, and they even cleaned up after themselves. That kind of professionalism is rare. Arctic Air has a customer for life."</p>
+        <span class="testi-service">✦ AC Repair</span>
+      </div>
+
+      <!-- Rating summary card -->
+      <div class="testi-card fade-in" style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:var(--blue-deep);border-color:var(--blue-deep);">
+        <div style="font-family:var(--font-display);font-size:4.5rem;font-weight:900;color:white;line-height:1;">4.9</div>
+        <div class="testi-stars" style="justify-content:center;margin:8px 0;">
+          <span style="font-size:1.4rem">★</span><span style="font-size:1.4rem">★</span><span style="font-size:1.4rem">★</span><span style="font-size:1.4rem">★</span><span style="font-size:1.4rem">★</span>
+        </div>
+        <p style="color:rgba(255,255,255,0.72);font-size:0.88rem;margin:0 0 20px;">Based on 800+ verified Google reviews</p>
+        <a href="https://google.com" target="_blank" class="btn-primary" style="font-size:0.85rem;padding:12px 22px;">
+          Read All Reviews →
+        </a>
+        <p style="color:rgba(255,255,255,0.4);font-size:0.72rem;margin-top:14px;">Rated #1 HVAC in Dallas 2023 & 2024</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ LEAD FORM SECTION ════════════════════════════════ -->
+<section id="contact" class="cta-form-section">
+  <div class="container">
+    <div class="cta-form-inner">
+      <div class="cta-form-left fade-in">
+        <span class="section-label" style="background:rgba(249,115,22,0.15);border-color:rgba(249,115,22,0.3);">Book Your Service</span>
+        <h2>Ready For <span>Cold Air</span><br>& Peace of Mind?</h2>
+        <p>Fill out the form and one of our service coordinators will call you back within 15 minutes to confirm your appointment. No wait times, no call centers — a real local person who knows your neighborhood.</p>
+        <div class="cta-perks">
+          <div class="cta-perk">
+            <div class="cta-perk-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><polyline points="20 6 9 17 4 12"/></svg></div>
+            Free diagnostic with any paid repair
+          </div>
+          <div class="cta-perk">
+            <div class="cta-perk-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><polyline points="20 6 9 17 4 12"/></svg></div>
+            Same-day appointments available
+          </div>
+          <div class="cta-perk">
+            <div class="cta-perk-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><polyline points="20 6 9 17 4 12"/></svg></div>
+            Upfront quote before any work begins
+          </div>
+          <div class="cta-perk">
+            <div class="cta-perk-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><polyline points="20 6 9 17 4 12"/></svg></div>
+            2-year parts & labor warranty
+          </div>
+          <div class="cta-perk">
+            <div class="cta-perk-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><polyline points="20 6 9 17 4 12"/></svg></div>
+            Financing available — apply in minutes
+          </div>
+        </div>
+        <div style="margin-top:28px;padding-top:24px;border-top:1px solid rgba(255,255,255,0.1);">
+          <p style="font-size:0.78rem;color:rgba(255,255,255,0.45);margin-bottom:8px;">PREFER TO CALL?</p>
+          <a href="tel:+12145550192" style="font-family:var(--font-display);font-size:1.8rem;font-weight:900;color:var(--orange);display:flex;align-items:center;gap:10px;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="26" height="26"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.36 12a19.79 19.79 0 01-3.07-8.67A2 2 0 013.27 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            (214) 555-0192
+          </a>
+          <p style="font-size:0.78rem;color:rgba(255,255,255,0.45);margin-top:4px;">We answer 24/7 — including holidays</p>
+        </div>
+      </div>
+      <div class="cta-form-card fade-in">
+        <h3>Get Fast Service Today</h3>
+        <p>We respond within 15 minutes. Free quote, no obligation.</p>
+        <div class="form-row">
+          <div class="form-group">
+            <label>First Name *</label>
+            <input type="text" placeholder="John">
+          </div>
+          <div class="form-group">
+            <label>Last Name *</label>
+            <input type="text" placeholder="Smith">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Phone Number *</label>
+          <input type="tel" placeholder="(214) 000-0000">
+        </div>
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" placeholder="john@email.com">
+        </div>
+        <div class="form-group">
+          <label>Service Needed *</label>
+          <select>
+            <option value="">— Select a Service —</option>
+            <option>🚨 AC Repair — Emergency (ASAP)</option>
+            <option>AC Repair — Non-Urgent</option>
+            <option>AC Installation / Replacement</option>
+            <option>Heating Repair — Emergency</option>
+            <option>Heating Repair — Non-Urgent</option>
+            <option>Furnace Installation</option>
+            <option>Annual Maintenance Plan</option>
+            <option>Get a Quote / Not Sure</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Brief Description (optional)</label>
+          <input type="text" placeholder="e.g., AC blowing warm air, making loud noise...">
+        </div>
+        <button class="form-submit" onclick="handleMainForm(this)">⚡ Send My Request — We'll Call in 15 Min</button>
+        <div class="form-guarantee">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><polyline points="20 6 9 17 4 12"/></svg>
+          No spam. No obligations. 100% free quote. We never share your info.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SERVICE AREAS ═════════════════════════════════════ -->
+<section id="areas" class="areas-section">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-label">Where We Work</span>
+      <h2 class="section-title">Serving Dallas & the Entire DFW Metro</h2>
+      <p class="section-sub">Not sure if we cover your area? Give us a call — chances are, we do. We're expanding every month.</p>
+    </div>
+    <div class="areas-grid">
+      <div class="area-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>Dallas</div>
+      <div class="area-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>Plano</div>
+      <div class="area-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>Frisco</div>
+      <div class="area-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>McKinney</div>
+      <div class="area-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>Allen</div>
+      <div class="area-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>Richardson</div>
+      <div class="area-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>Garland</div>
+      <div class="area-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>Mesquite</div>
+      <div class="area-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>Arlington</div>
+      <div class="area-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>Irving</div>
+      <div class="area-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>Carrollton</div>
+      <div class="area-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>Grand Prairie</div>
+      <div class="area-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>Lewisville</div>
+      <div class="area-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>Denton</div>
+      <div class="area-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>Flower Mound</div>
+      <div class="area-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>Rockwall</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ EMERGENCY BANNER ══════════════════════════════════ -->
+<div class="emergency-banner">
+  <div class="container">
+    <div class="emergency-inner">
+      <div class="emergency-text">
+        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        <div>
+          <strong>HVAC Emergency? We Answer 24/7 — Including Weekends & Holidays</strong>
+          <span>No extra charge for after-hours service. We're here when you need us most.</span>
+        </div>
+      </div>
+      <a href="tel:+12145550192" class="emergency-call-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.36 12a19.79 19.79 0 01-3.07-8.67A2 2 0 013.27 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        Call (214) 555-0192
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ FOOTER ════════════════════════════════════════════ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-logo-area">
+        <div class="logo" style="margin-bottom:16px;">
+          <div class="logo-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" width="22" height="22"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></div>
+          <div>
+            <div class="logo-text">Arctic Air <span>Solutions</span></div>
+            <div class="logo-sub" style="color:rgba(255,255,255,0.35)">Dallas's HVAC Experts</div>
+          </div>
+        </div>
+        <p class="footer-desc">Serving Dallas homeowners since 2010 with honest, fast, expert HVAC service. When your comfort is on the line, you deserve a company that shows up, fixes it right, and backs their work.</p>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.36 12a19.79 19.79 0 01-3.07-8.67A2 2 0 013.27 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          <a href="tel:+12145550192" style="color:var(--orange);font-weight:800;font-size:1rem;">(214) 555-0192</a>
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <a href="mailto:info@arcticairsolutions.com">info@arcticairsolutions.com</a>
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          Dallas, Texas &amp; DFW Metro Area
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Our Services</h4>
+        <ul class="footer-links">
+          <li><a href="#services">AC Repair</a></li>
+          <li><a href="#services">AC Installation</a></li>
+          <li><a href="#services">Heating Repair</a></li>
+          <li><a href="#services">Furnace Installation</a></li>
+          <li><a href="#services">Maintenance Plans</a></li>
+          <li><a href="#services">Mini-Split / Ductless</a></li>
+          <li><a href="#contact">Emergency Service</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul class="footer-links">
+          <li><a href="#why-us">About Us</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#areas">Service Areas</a></li>
+          <li><a href="#contact">Book a Service</a></li>
+          <li><a href="#">Financing Options</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Business Hours</h4>
+        <div class="hours-item">
+          <span>Monday – Friday</span>
+          <span class="open">7am – 9pm</span>
+        </div>
+        <div class="hours-item">
+          <span>Saturday</span>
+          <span class="open">8am – 8pm</span>
+        </div>
+        <div class="hours-item">
+          <span>Sunday</span>
+          <span class="open">9am – 6pm</span>
+        </div>
+        <div class="hours-item">
+          <span>Emergency Service</span>
+          <span class="open">24/7/365</span>
+        </div>
+        <a href="tel:+12145550192" class="hours-phone">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.36 12a19.79 19.79 0 01-3.07-8.67A2 2 0 013.27 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          (214) 555-0192
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 Arctic Air Solutions LLC · Dallas, TX · TACL Licensed · All Rights Reserved</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══ SCRIPTS ══════════════════════════════════════════ -->
+<script>
+  // Mobile menu
+  function toggleMenu() {
+    const menu = document.getElementById('mobileMenu');
+    menu.classList.toggle('open');
+    document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
+  }
+  document.getElementById('mobileMenu').addEventListener('click', function(e) {
+    if (e.target === this) toggleMenu();
+  });
+
+  // Scroll animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add('visible');
+        }, (entry.target.dataset.delay || 0));
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.fade-in').forEach((el, i) => {
+    el.dataset.delay = (i % 4) * 80;
+    observer.observe(el);
+  });
+
+  // Form handlers
+  function handleHeroForm(btn) {
+    btn.textContent = '✓ Request Sent! We\'ll call you shortly.';
+    btn.style.background = '#22c55e';
+    btn.disabled = true;
+  }
+
+  function handleMainForm(btn) {
+    btn.textContent = '✓ Sent! Expect our call within 15 minutes.';
+    btn.style.background = '#22c55e';
+    btn.disabled = true;
+  }
+
+  // Sticky nav shadow
+  window.addEventListener('scroll', () => {
+    const nav = document.querySelector('nav');
+    nav.style.boxShadow = window.scrollY > 20
+      ? '0 4px 20px rgba(0,0,0,0.12)'
+      : '0 2px 12px rgba(0,0,0,0.08)';
+  });
+</script>
+</body>
+</html>
